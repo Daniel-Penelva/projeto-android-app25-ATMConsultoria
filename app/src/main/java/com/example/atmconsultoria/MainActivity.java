@@ -43,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_principal,R.id.nav_servico,
+                R.id.nav_cliente, R.id.nav_contato, R.id.nav_sobre)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -60,3 +59,25 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
+
+/*
+* Passo a Passo da implementação
+*  1 - Apaguei os ids dos componentes do construtor 'AppBarConfiguration.Builder()' em MainActivity.xml.
+*
+*  2 - Vamos criar icones (assent vector), alterar a configuração das Strings.xml criando os valores:
+*      principal, serviço, cliente, contato e sobre
+*
+* 3 - Alterar as configurações do activity_main.drawer.xml com a atual valores modificados do String.xml
+*
+* 4 - Apagar as pastas que contêm os fragments, só deixar a pasta raiz ui e o MainActivity.
+*
+* 5 - Criar novas pastas de fragments, são elas: principal, serviço, cliente, contato e sobre.
+*
+* 6 - Criar um fragment blank para todas elas.
+*     OBS. Ao criar o fragment só marcar 'create layout xml'
+*
+* 7 - Criar os fragments (principal, serviço, cliente, contato e sobre) com os respectivas configurações
+*     no mobile_navigation.xml.
+*
+* 8 - Configurar todos os ids no 'AppBarConfiguration.Builder()' em MainActivity.xml.
+* */
