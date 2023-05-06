@@ -66,10 +66,14 @@ public class MainActivity extends AppCompatActivity {
         //Define o texto do email
         intent.putExtra(intent.EXTRA_TEXT, "Mensagem Automática");
 
-        //Define o tipo de dados que quer compartilhar, por exemplo, abre apps definido como padrão.
-        intent.setType("text/plain");
+        //Define qualquer tipo de imagem, o asteristico define qlq formato de imagem
+        // Para definir um formato especifico - ex: setType("image/png");
+        intent.setType("image/*");
 
         startActivity(Intent.createChooser(intent, "Escolha um app de email"));
+
+        // IMPORTANTE!!! Este link possui os tipos de setType que pode ser utilizado:
+        // link: https://www.sitepoint.com/mime-types-complete-list/
     }
 
     @Override
