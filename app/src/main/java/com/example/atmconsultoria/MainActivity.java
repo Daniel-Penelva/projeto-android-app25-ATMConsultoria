@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void enviarEmail(){
 
-        String imagem = "https://blog.engecass.com.br/wp-content/uploads/2021/08/tudo-sobre-customizacao-de-carros.png";
+        String endereco = "https://www.google.com/maps/place/Cristo+Redentor/@-22.9520689,-43.2130105,17z/data=!4m10!1m2!2m1!1sCristo+redentor!3m6!1s0x997fd5984aa13f:0x9dc984d7019502de!8m2!3d-22.951916!4d-43.2104872!15sCg9DcmlzdG8gcmVkZW50b3KSARFjdWx0dXJhbF9sYW5kbWFya-ABAA!16zL20vMDNneXR3";
 
-        // ACTION_VIEW - Abre uma imagem no navegador
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(imagem));
+        // ACTION_VIEW - inserindo uma url google map vai abrir o app do Google Map.
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(endereco));
         startActivity(intent);
     }
 
