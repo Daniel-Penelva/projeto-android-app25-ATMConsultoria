@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void enviarEmail(){
 
-        String celular = "tel:21995265588";
+        String imagem = "https://blog.engecass.com.br/wp-content/uploads/2021/08/tudo-sobre-customizacao-de-carros.png";
 
-        // ACTION_DIAL - Digita o número do telefone e deixa o usuário para fazer a ligação
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular));
+        // ACTION_VIEW - Abre uma imagem no navegador
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(imagem));
         startActivity(intent);
     }
 
