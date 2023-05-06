@@ -66,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
         //Define o texto do email
         intent.putExtra(intent.EXTRA_TEXT, "Mensagem Automática");
 
-        //Define o tipo de dados que quer compartilhar, por exemplo, email que está exemplificado abaixo.
-        intent.setType("message/rfc822");
+        //Define o tipo de dados que quer compartilhar, por exemplo, abre apps definido como padrão.
+        intent.setType("text/plain");
 
-        startActivity(Intent.createChooser(intent, "Compartilhar"));
+        startActivity(Intent.createChooser(intent, "Escolha um app de email"));
     }
 
     @Override
